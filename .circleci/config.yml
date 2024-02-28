@@ -1,21 +1,7 @@
 version: 2.1
-workflows
-  test-deploy:
-jobs:
-  test:
-    docker:
-      - image: cimg/node:17.2.0
-    steps:
-      - checkout
-      # - node/install-packages:
-      #     pkg-manager: yarn
-      - run: node --version
-      
-
-# version: 2.1
-# orbs:
-#   node: circleci/node@4.7.0
-#   heroku: circleci/heroku@1.2.6
+orbs:
+  node: circleci/node@4.7.0
+  heroku: circleci/heroku@1.2.6
 
 # jobs:
 #   build_and_test:
